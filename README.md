@@ -10,40 +10,30 @@ Laravel 10 pepustakaan dibuat oleh :
 ## Fitur 
 
 - Autentikasi Admin dan User Dengan Laravel Passport
-- CRUD News
-- Create Comments dengan Redis
-- CRUD Penerbit
-- CRUD Rak
-- Melakukan peminjaman buku
-- Menampilkan chart
-- Mengimplementasikan livewire
-- Menggunakan admin LTE
-- Menggunakan fakerphp
-- Dan lain-lain
+- CRUD News  Dengan Event Listener (created, updated,
+and deleted) dan Respon Api Menggunakan Resource
+- Create Comments dengan Redis Queue (Wajib Instal Redis, untuk pengguna windows silahkan unduh disini : https://github.com/microsoftarchive/redis/releases')
+
 
 ## User
 
 **Admin**
 
-- email: admin@gmail.com
-- Password: 123123123
+- email: admin@example.com
+- Password: @baliIndoTower
 
-**Petuags**
+**User**
 
-- email: petugas@gmail.com
-- Password: 123123123
+- email: user@example.com
+- Password: @baliIndoTower
 
-**Peminjam**
-
-- email: peminjam@gmail.com
-- Password: 123123123
 
 ## Install
 
 **Clone Repository**
 
 ```bash
-git clone https://github.com/musyahya/laravel8_perpustakaan.git
+git clone https://github.com/yusufrhmntdev/bali-indo-tower-test.git
 ```
 
 **Download zip**
@@ -61,11 +51,7 @@ extract file zip
 composer install
 ```
 
-## Copy .Env
 
-```bash
-copy .env.example menjadi .env
-```
 
 ## Buka Web Server
 
@@ -73,7 +59,7 @@ copy .env.example menjadi .env
 ## Buat database di localhost 
 
 ```bash
-nama database : perpustakaan_laravel_8
+nama database : bali_tower_indo_test
 ```
 
 ## Setting database di .env
@@ -91,25 +77,28 @@ DB_PASSWORD=
 php artisan key:generate
 ```
 
-## Jalankan migrate dan seeder
+## Jalankan migrate / import database
 
 ```bash
-php artisan migrate --seed
+php artisan migrate  /  gunakan fitur import database , database telah disediakan di dalam folder aplikasi (bali_tower_indo_test.sql)
 ```
 
-## Buat Storage Link
 
-```bash
-php artisan storage:link
+
+## Intsal Redis, untuk pengguna windows silahkan unduh disini : https://github.com/microsoftarchive/redis/releases') , lalu tambahkan Settingan di berikut di .ENV
+```REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+REDIS_CLIENT=predis
+
+BROADCAST_DRIVER=log
+CACHE_DRIVER=redis
+FILESYSTEM_DISK=local
+QUEUE_CONNECTION=redis
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
+
 ```
-
-## Download Asset Buku
-
-```bash
-https://drive.google.com/drive/folders/1bCEhRhFVnTiRG9YhibUz2lLwFC6SIFNW?usp=sharing
-```
-
-## Buat Folder buku di public dan copy asetnya
 
 
 ## Jalankan Serve
@@ -117,12 +106,11 @@ https://drive.google.com/drive/folders/1bCEhRhFVnTiRG9YhibUz2lLwFC6SIFNW?usp=sha
 ```bash
 php artisan serve
 ```
+## Lalu Test Dengan Postman di Link Berikut
+`https://elements.getpostman.com/redirect?entityId=13584469-1b1c99b0-abc7-4eee-99b0-e7979b558f87&entityType=collection`
 
-## Contributing
-
-Contributions, issues and feature requests di persilahkan.
-Jangan ragu untuk memeriksa halaman masalah jika Anda ingin berkontribusi. **Berhubung Project ini saya sudah selesaikan sendiri, namun banyak fitur yang kalian dapat tambahkan silahkan berkontribusi yaa!**
+untuk memeriksa halaman masalah jika Anda ingin berkontribusi. **Berhubung Project ini saya sudah selesaikan sendiri, namun banyak fitur yang kalian dapat tambahkan silahkan berkontribusi yaa!**
 
 ## License
 
-- Copyright © 2021 Musyahya.
+- Copyright © 2023 Yusuf Rahmanto.
