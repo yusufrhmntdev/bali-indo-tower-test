@@ -109,7 +109,7 @@ php artisan serve
 ## Lalu Test Dengan Postman di Link Berikut
 `https://elements.getpostman.com/redirect?entityId=13584469-1b1c99b0-abc7-4eee-99b0-e7979b558f87&entityType=collection`
 
-untuk memeriksa halaman masalah jika Anda ingin berkontribusi. **Berhubung Project ini saya sudah selesaikan sendiri, namun banyak fitur yang kalian dapat tambahkan silahkan berkontribusi yaa!**
+
 
 ## License
 
